@@ -69,7 +69,7 @@
 						<div class="form-group">
 							<label for = "login_username" class="col-sm-4 control-label">Username</label>
 							<div class="col-sm-6">
-								<input type="username" id = "login_username" class="form-control" name = "username" placeholder="Username" required>
+								<input type="text" id = "login_username" class="form-control" name = "username" placeholder="Username" required>
 							</div>
 						</div>
 						
@@ -102,7 +102,7 @@
 						<div class="form-group">
 							<label class="col-sm-4 control-label">Username</label>
 							<div class="col-sm-6">
-								<input type="username" class="form-control" name = "username" placeholder="Username" required>
+								<input type="text" class="form-control" name = "username" placeholder="Username" required>
 							</div>
 						</div>
 							

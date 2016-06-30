@@ -8,7 +8,6 @@
 		header("location: index.php");
 	}
 ?>
-<!---->
 <!DOCTYPE html>
 <html>
 <head>
@@ -483,7 +482,7 @@
 				    	    					<option value="request_filter_type_equals"><span class = "interface_sql_filters_equals">Equals</span></option>
 				    	    					<option value="interface_sql_filters_not_equals"><span class = "interface_sql_filters_not_equals">NOT Equal To</span></option>
 				    	    					<option value="interface_sql_filters_list"><span class = "interface_sql_filters_list">Items From List</span></option>
-				    	    					<option value="interface_sql_filters_not_list"><span class = "interface_sql_filters_not_list">Items From "NOT List"</span></option>
+				    	    					<option value="interface_sql_filters_not_list"><span class = "interface_sql_filters_not_list">Items not in the list</span></option>
 				    	    					<option value="interface_sql_filters_starts"><span class = "interface_sql_filters_starts">Starts With</span></option>
 				    	    					<option value="interface_sql_filters_ends"><span class = "interface_sql_filters_ends">Ends With</span></option>
 				    	    					<option value="interface_sql_filters_contains"><span class = "interface_sql_filters_contains">Contains</span></option>
@@ -491,7 +490,7 @@
 										</td>
 										<td>
 											<select class="form-control" name="request_filter_field" id = "request_filter_field" style = "max-width:25em;">
-												<option selected disabled style = "display: none;" id = "request_filter_field_title">Field To Use</span></span></option>
+												<option selected disabled style = "display: none;" id = "request_filter_field_title">Field To Use</option>
 				    						</select>
 										</td>
 										<td>
