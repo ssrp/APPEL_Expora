@@ -7,7 +7,7 @@ var COUNT = [];
 // This function is used to extract all the words from the database.
 function extractWords()
 {
-	var query = "select avis_signs from comments";
+	var query = "select cible_textes from petitions";
 	$.ajax(
 					{
 						url:"php/extractWords.php", //the page containing php script
@@ -24,16 +24,12 @@ function extractWords()
 // This function is used to add a new word in the corpora if it is not present. Otherwise, increament the value of corresponding count.
 function addWord(word)
 {
-	var wordIsPresent = false;
-	for(var i = 0; i < WORDS.length; i++)
+	var i = WORDS.indexOf(word);
+	if(i > -1)
 	{
-		if(WORDS[i] == word)
-		{
-			COUNT[i] = COUNT[i] + 1;
-			wordIsPresent = true;
-		}
+		COUNT[i] = COUNT[i] + 1;
 	}
-	if(!wordIsPresent)
+	else
 	{
 		WORDS.push(word);
 		COUNT.push(1);
@@ -93,7 +89,7 @@ function drawMultSeries() {
 		
 
 		data.addRow([WORDS[i], num,color]);
-		console.log(WORDS[i].concat(" -- ").concat(num) + " -- " + color);
+
 	}
 	output = output.concat("</table>");
 	div.innerHTML = output;

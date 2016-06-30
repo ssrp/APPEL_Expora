@@ -1481,6 +1481,7 @@ function dynamicLoad()
 	var filter_type = document.getElementById("request_filter_type");
 	var output = document.getElementById("request_filter_finalvalue").value;
 	document.getElementById('request_filter_add_new').style.display = 'none';
+	document.getElementById('request_filter_add').style.display = 'block';
 	var filter_field = document.getElementById("request_filter_field");
 	var field = filter_field.options[filter_field.selectedIndex].value;
 	filter_type = document.getElementById("request_filter_type");
