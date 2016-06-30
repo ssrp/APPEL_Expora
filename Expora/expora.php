@@ -841,7 +841,12 @@
 					<li><a href="#" onclick = "alert('Under Construction!')"><span class = "">Other Visualizations</span></a></li>
 				</ul>
 			</nav>
+			<br><br>
 
+		<div id = "query_result_downloads" style = "font-size: 2em; margin-left:0em">
+			<ul id = "query_result_downloads_ul"  style = "margin-left:0em">
+			</ul>
+		</div>
 		<div id = "output_container" style = "overflow:auto">
 
 

@@ -8,6 +8,9 @@ var shared = 0;
 var hostip = "No Internet";
 
 
+// All the files to be downloaded will be shown in this Unordered list.
+var files = document.getElementById("query_result_downloads_ul");
+
 // Is Replacement of Smileys needed? false is default.
 var r_smileys = "false";
 var r_type = false;
@@ -78,6 +81,7 @@ function Loader(toLoad)
 // Function to Build The Query
 function buildQuery()
 {
+	document.getElementById("query_result_downloads_ul").innerHTML = "";
 
 	Loader(true);
 	document.getElementById("form_metadata").style.display = "none";
@@ -286,9 +290,21 @@ function buildQuery()
 							document.getElementById("download_file").href = "downloads/".concat(result); 
 							document.getElementById("download_file").download = result;
 							document.getElementById('download_file').click();
+														
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>TextObserver file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>TextObserver file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
-					Loader(false);}
+						Loader(false);
+					}
 					}
 				);
 		 	}
@@ -305,9 +321,21 @@ function buildQuery()
 							document.getElementById("download_file").href = "downloads/".concat(result); 
 							document.getElementById("download_file").download = result;
 							document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>TreeCloud file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>TreeClouD file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
-					Loader(false);}
+					Loader(false);
+					
+			}
 					}
 				);
 		  	}
@@ -324,9 +352,21 @@ function buildQuery()
 							document.getElementById("download_file").href = "downloads/".concat(result); 
 							document.getElementById("download_file").download = result;
 							document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>Alceste file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>Alceste file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
-					Loader(false);}
+					Loader(false);
+
+				}
 					}
 				);
 		  	}
@@ -343,9 +383,21 @@ function buildQuery()
 							document.getElementById("download_file").href = "downloads/".concat(result); 
 							document.getElementById("download_file").download = result;
 							document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>Lexico file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>Lexico file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
-					Loader(false);}
+					Loader(false);
+
+				}
 					}
 				);
 		  	}
@@ -362,9 +414,21 @@ function buildQuery()
 							document.getElementById("download_file").href = "downloads/".concat(result); 
 							document.getElementById("download_file").download = result;
 							document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>CSV file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>CSV file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
-					Loader(false);}
+					Loader(false);
+
+				}
 					}
 				);
 		  	}
@@ -381,9 +445,21 @@ function buildQuery()
 							document.getElementById("download_file").href = "downloads/".concat(result); 
 							document.getElementById("download_file").download = result;
 							document.getElementById('download_file').click();
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>HTML file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>HTML file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}
+		   			    	$(output).appendTo("#query_result_downloads_ul");	
 						},
 	  	complete: function(){
-					Loader(false);}
+					Loader(false);
+
+				}
 					}
 				);
 		  	}
@@ -424,7 +500,8 @@ function buildQuery()
 											document.getElementById("output_container").innerHTML = xsl_result;
 										},
 	  	complete: function(){
-					Loader(false);}
+					Loader(false);
+				}
 									}
 								);
 							}
@@ -569,6 +646,7 @@ function switch_shared()
 // Running the query if SQL Query is used (NOT for SubCorpora App)
 function runQuery()
 {
+	document.getElementById("query_result_downloads_ul").innerHTML  = "";
 
 	Loader(true);
 	document.getElementById("form_metadata").style.display = "none";
@@ -686,6 +764,16 @@ function runQuery()
 					document.getElementById("download_file").href = "downloads/".concat(result); 
 					document.getElementById("download_file").download = result;
 					document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>TextObserver file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>TextObserver file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 				}
 			}
 		);
@@ -703,6 +791,16 @@ function runQuery()
 					document.getElementById("download_file").href = "downloads/".concat(result); 
 					document.getElementById("download_file").download = result;
 					document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>TreeCloud file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>TreeCloud file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 				}
 			}
 		);
@@ -720,6 +818,16 @@ function runQuery()
 					document.getElementById("download_file").href = "downloads/".concat(result); 
 					document.getElementById("download_file").download = result;
 					document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>Alceste file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>Alceste file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 				}
 			}
 		);
@@ -737,6 +845,17 @@ function runQuery()
 					document.getElementById("download_file").href = "downloads/".concat(result); 
 					document.getElementById("download_file").download = result;
 					document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>Lexico file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>Lexico file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}
+		   			    	$(output).appendTo("#query_result_downloads_ul");
 				}
 			}
 		);
@@ -754,6 +873,16 @@ function runQuery()
 					document.getElementById("download_file").href = "downloads/".concat(result); 
 					document.getElementById("download_file").download = result;
 					document.getElementById('download_file').click();
+							
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>CSV file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>CSV file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}$(output).appendTo("#query_result_downloads_ul");
 				}
 			}
 		);
@@ -771,6 +900,17 @@ function runQuery()
 					document.getElementById("download_file").href = "downloads/".concat(result); 
 					document.getElementById("download_file").download = result;
 					document.getElementById('download_file').click();
+
+							var output = "";
+							if(result.indexOf(" ") > -1)
+							{
+								output = "<li>HTML file could not be created: <br><span style = 'font-size:0.5em;'>" + result + "</span>";
+							}
+							else
+							{
+								var output = "<li>HTML file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+		   			    	}
+		   			    	$(output).appendTo("#query_result_downloads_ul");
 				}
 			}
 		);
