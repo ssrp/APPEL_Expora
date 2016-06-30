@@ -92,7 +92,7 @@
 							Expora is a web-application/web-interface which helps you extract any database which as maximum two tables, in many export formats(HTML, Lexico, TreeCloud, etc). The supported database management systems are MySQL and PostgreSQL. The application is made as generic as possible and currently, it's in French and English language. The code behind Expora is very easy to understand and can be edited/improved for any specific use.
 							<br>
 							You can connect your database by altering the connect.php file and adding the appropriate tables in the database. Here is the complete app, you may also find a very detailed installation process here:<br>
-							<center><a href = "#" class = "text-center btn btn-success" onclick = "alert('Expora is under-construction right now!')">Download Expora</a></center>
+							<center><a href = "https://github.com/ssrp/APPEL_Expora" class = "text-center btn btn-success" onclick = "alert('Expora is under-construction right now!')">Download Expora</a></center>
 							<h3>Database Is Secure!</h3>
 							The database is properly protected from the people who are not authorized to use Expora. They should have an account to access the database. So, there's no loss/leakage of data. When signing up, an <b>Authentication Key</b> is required by the user without which, he/she can not access Expora. If someone tries to use any 'bad' queries which might affect the database, he/she will be caught because every time user runs the query, his username, query, time of execution and IP address is logged.
 							<br>
