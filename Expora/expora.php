@@ -183,21 +183,21 @@
 									<div class = "display_pictures">
 										<img class = "display_pictures_img" src = "images/sai.jpg">
 										<hr style = "margin:0.2em; padding:0em">
-										<b>Mr. Sai Samarth R Phaye</b>
+										<b>Sai Samarth R Phaye</b>
 									</div>
 								</a>
 								<a href = "http://igm.univ-mlv.fr/~gambette/indexENG.php" target = "_blank">
 									<div class = "display_pictures">
 									<img class = "display_pictures_img" src = "images/philippe.jpg">
 										<hr style = "margin:0.2em; padding:0em">
-										<b>Dr. Philippe Gambette</b>
+										<b>Philippe Gambette</b>
 									</div>
 								</a>
 								<a href = "http://ceditec.u-pec.fr/membres/enseignants-chercheurs/leblanc-jean-marc-341913.kjsp" target = "_blank">
 									<div class = "display_pictures">
 									<img class = "display_pictures_img" src = "images/jeanmarc.jpg">
 										<hr style = "margin:0.2em; padding:0em">
-										<b>Dr. Jean-Marc Leblanc</b>
+										<b>Jean-Marc Leblanc</b>
 									</div>
 								</a>
 							</center>

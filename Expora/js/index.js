@@ -1677,6 +1677,7 @@ function editFilter()
 	document.getElementById("request_filter_field").selectedIndex = 0;
 	document.getElementById("request_filter_field").style.display = "block";
 	document.getElementById("request_filter_interval_inputs").style.display = "none";
+	document.getElementById("request_filter_not_interval_inputs").style.display = "none";
 	document.getElementById("request_filter_value").style.display ="block"
 	document.getElementById("request_filter_value").value = "";
 	document.getElementById("request_filter_interval_max").value = "";
