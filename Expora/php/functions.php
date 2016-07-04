@@ -96,7 +96,7 @@
 		}
 		else if($system == "PostgreSQL")
 		{
-			return pg_close($conn);
+			return pg_close($connection);
 		}
 	}
 	/*********************END OF GENERIC FUNCTIONS*********************/

@@ -55,7 +55,7 @@
     $hostip = $_POST['hostip'];
 
     // Create The Query To Add Logs
-    $add_log = "INSERT INTO " . $prefix . "logs VALUES (\"" . $time . "\", \"" . $localip . "\", \"" . $hostip . "\", \"" . $userid . "\", \"" . $query . "\", \"" . $shared . "\", \"" . $favourite . "\", \"" . $query_name . "\")";
+    $add_log = "INSERT INTO " . $prefix . "logs VALUES ('" . $time . "', '" . $localip . "', '" . $hostip . "', '" . $userid . "', '" . $query . "', '" . $shared . "', '" . $favourite . "', '" . $query_name . "')";
 
     // Run The Query
     $query_run = runQuery($conn, $add_log);
