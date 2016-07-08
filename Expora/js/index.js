@@ -726,10 +726,11 @@ function runQuery()
 			data:{ query: query, r_type: r_type, r_smileys: r_smileys, lowercase:lowercase,findreplace:findreplace}, // Passing the query to a variable named 'query' in executeQuery	
 			success:function(result)
 			{
-				/*Creating the output*/
-				document.getElementById("query_result").style.display = "block";
-				document.getElementById("output_container").innerHTML = result;
-			},
+				if(result == "")
+					alert("File Created Successfully!");
+				else
+					alert(result);
+					},
 	  	complete: function(){
 					Loader(false);
 				}

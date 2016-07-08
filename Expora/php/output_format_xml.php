@@ -1,25 +1,28 @@
 <?php
 	// Resume The Session
 	session_start();
+
+
 	if(!isset($_SESSION['name']))
 	{
 	    header("location: index.php");
 	}
 	include 'connect.php';
 
-		//Getting the query from the called JS function.
+	//Getting the query from the called JS function.
 		$query = $_POST['query'];
-			
+		
+
     // Replacement of Smileys?
     $r_smileys = $_POST['r_smileys'];
     $r_type = $_POST['r_type'];
-	$findreplace = $_POST['findreplace'];
 	$lowercase = $_POST['lowercase'];
 
+	$findreplace = $_POST['findreplace'];
 		function getLocalIP(){
-		$ip = "";
 		exec("ipconfig /all", $output);
-		    foreach($output as $line){
+		    $ip = "";
+		foreach($output as $line){
 		        if (preg_match("/(.*)IPv4 Address(.*)/", $line)){
 		            $ip = $line;
 	   	         $ip = str_replace("IPv4 Address. . . . . . . . . . . :","",$ip);
@@ -35,8 +38,9 @@
 	    $user = $_SESSION['name'];
 	    $timespaced = str_replace(" ","_",$time);
 	    $timespaced = str_replace(":",".",$timespaced);
-	    $name = $user . "_" . $timespaced . "_" . "treecloud.txt";
+	    $name =  $user . "_" . $timespaced . "_" . "lexico.txt";
 		$myfile = fopen("../downloads/" . $name, "w") or die("Unable to create file!");
+
 
 		$query_run = runQuery($conn, $query);
 		if(!$query_run)
@@ -53,6 +57,43 @@
 		    $cols[] = $field;
 		}
 		while ($row = fetchArray($query_run)) {
+			$i = 0;
+			$flag = true;
+		    foreach($row as $field) {
+		    		fwrite($myfile, "<" . $tableOne . "_" . $tableTwo . ">");
+			    	if($flag)
+			    	{
+				    	// IF Text Fields Then Do This --
+				    	if(checkTextFields($cols[$i]))
+				    	{
+				    	}
+				    	// Otherwise --
+				    	else
+				    	{
+						    if($r_smileys == "true")
+						    {
+						    	$field = replaceSmileys($field, $r_type);
+						    }
+						    if($findreplace == "true")
+						    {
+						    	$field = replaceText($field);
+						    }
+						    if($lowercase == "true")
+						    {
+						    	$field = mb_strtolower($field);
+						    }
+				    		$field = trim(preg_replace('/\s+/', ' ', $field));
+				  			$field = str_replace(" ","_",$field);
+					        fwrite($myfile, "<" . $cols[$i] . "=" . $field . ">");
+				    	}
+				    	$i++;
+			        	$flag = false;
+			        }
+			        else
+			        {
+			        	$flag = true;
+			        }
+		    }
 			$i = 0;
 			$flag = true;
 		    foreach($row as $field) {
@@ -79,8 +120,7 @@
 			  				$field = str_replace("<"," ",$field);
 				  			$field = str_replace(">"," ",$field);
 				  			$field = str_replace("&"," ",$field);
-				  			$field = iconv(mb_detect_encoding($field, mb_detect_order(), false), "ISO-8859-1//TRANSLIT//IGNORE" , $field);
-					        fwrite($myfile, $field . " ");
+				  			fwrite($myfile, "<LexicoTextType=" . $cols[$i] . ">" . $field);
 				    	}
 				    	// Otherwise --
 				    	else
@@ -94,15 +134,8 @@
 			        	$flag = true;
 			        }
 		    }
-
-			fwrite($myfile,  "\n");
-			fwrite($myfile,  "a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a");
 			fwrite($myfile,  "\n");
 		}
-		$data = file("../downloads/" . $name); 
-		$last_line = sizeof($data) - 1; 
-		unset($data[$last_line]);
-		fwrite($myfile, implode('', $data)); 
 		closeConnection($conn);
 		fclose($myfile);
 		echo $name;

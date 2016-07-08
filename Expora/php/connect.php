@@ -28,8 +28,7 @@
 
 	// Prefix is stored here.
 	$prefix = "petitions_"; // PUT YOUR PREFIX HERE. BUT IF YOU DO IT, CHANGE THE TABLE NAMES IN THE DATABASE ACCORDINGLY
-
-
+	
 	// Create A Connection
 	if($system == "MySQL")
 	{
@@ -55,4 +54,5 @@
 
 	// Include Generic Functions.
 	include 'functions.php';
+	include 'functions2.php';
 ?>
