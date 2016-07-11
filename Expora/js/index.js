@@ -66,7 +66,7 @@ function addTable(table)
 
 }
 
-// Function to display the loader
+// Function to display the loader animation
 function Loader(toLoad)
 {
 	if(toLoad)
@@ -280,6 +280,7 @@ function buildQuery()
 			if(document.getElementById('output_format_txm_radio').checked) 
 			{
 				file_format_selected = true;
+				// Create TXM Output
 				$.ajax(
 					{
 						url:"php/output_format_txm.php", //the page containing php script
@@ -303,11 +304,13 @@ function buildQuery()
 		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
+	  					// Disable the laoder Animation
 						Loader(false);
 					}
 					}
 				);
 		 	}
+		 	// Create TreeCloud Output
 			if(document.getElementById('output_format_treecloud_radio').checked)
 			{
 				file_format_selected = true;
@@ -339,6 +342,7 @@ function buildQuery()
 					}
 				);
 		  	}
+		  	// Create Alceste Output
 			if(document.getElementById('output_format_alceste_radio').checked)
 			{
 				file_format_selected = true;
@@ -370,6 +374,7 @@ function buildQuery()
 					}
 				);
 		  	}
+		  	// Create Lexico Output
 			if(document.getElementById('output_format_lexico_radio').checked)
 			{
 				file_format_selected = true;
@@ -401,6 +406,7 @@ function buildQuery()
 					}
 				);
 		  	}
+		  	// Create CSV output
 			if(document.getElementById('output_format_csv_radio').checked)
 			{
 				file_format_selected = true;
@@ -432,6 +438,7 @@ function buildQuery()
 					}
 				);
 		  	}
+		  	// Create HTML Output
 			if(document.getElementById('output_format_html_radio').checked)
 			{
 				file_format_selected = true;
@@ -463,6 +470,8 @@ function buildQuery()
 					}
 				);
 		  	}
+
+		  	// THIS NEEDS TO BE UPDATED!
 			if(document.getElementById('output_format_xsl_radio').checked)
 			{
 				file_format_selected = true;
@@ -752,6 +761,7 @@ function runQuery()
 
 	/*File Format*/
 	var file_format_selected = false;
+	// Create TXM Output
 	if(document.getElementById('sql_output_format_txm_radio').checked) 
 	{
 		file_format_selected = true;
@@ -779,6 +789,7 @@ function runQuery()
 			}
 		);
  	}
+ 	// Create TreeCloud Output
 	if(document.getElementById('sql_output_format_treecloud_radio').checked)
 	{
 		file_format_selected = true;
@@ -806,6 +817,7 @@ function runQuery()
 			}
 		);
   	}
+  	// Create Alceste output
 	if(document.getElementById('sql_output_format_alceste_radio').checked)
 	{
 		file_format_selected = true;
@@ -833,6 +845,7 @@ function runQuery()
 			}
 		);
   	}
+  	// Create Lexico output
 	if(document.getElementById('sql_output_format_lexico_radio').checked)
 	{
 		file_format_selected = true;
@@ -861,6 +874,8 @@ function runQuery()
 			}
 		);
   	}
+
+  	// Create CSV Output
 	if(document.getElementById('sql_output_format_csv_radio').checked)
 	{
 		file_format_selected = true;
@@ -888,6 +903,8 @@ function runQuery()
 			}
 		);
   	}
+
+  	// Create HTML output
 	if(document.getElementById('sql_output_format_html_radio').checked)
 	{
 		file_format_selected = true;
@@ -1086,7 +1103,7 @@ function uploadMetadataCSV()
 	);
 }
 
-
+// Loading the text fields in the Expora
 function loadTextFields()
 {
 	var lang;
@@ -1133,6 +1150,8 @@ function loadTextFields()
 		}
 	);
 }
+
+// Loading the metadata fields in the Expora
 function loadMetadataFields()
 {
 	var lang;
@@ -1671,6 +1690,8 @@ function dynamicLoad()
 	}
 	document.getElementById("request_filter_finalvalue").value = output;
 }
+
+// When we try to edit the filter, all current options go to default.
 function editFilter()
 {
 	filter = document.getElementById("request_filter_finalvalue").value;
@@ -1684,6 +1705,8 @@ function editFilter()
 	document.getElementById("request_filter_interval_max").value = "";
 	document.getElementById("request_filter_interval_min").value = "";
 }
+
+// Building the history pane whenever the website is loaded.
 function buildHistory()
 {
 	var lang;
@@ -1772,6 +1795,8 @@ function buildHistory()
 		}
 	);
 }
+
+// Building the shared pane whenever the website is loaded.
 function buildShared()
 {
 	var output = "<thead><tr><th><span class ='log_queryname_title'>Name</span></th><th><span class ='log_time_title'>Time</span></th><th><span class ='log_query_title'>Query</span></th><th><span class ='log_sharedby_title'>Shared By</span></th></tr></thead>";
@@ -1819,14 +1844,20 @@ function buildShared()
 		}
 	);
 }
+
+// Is query shared?
 function addShared()
 {
 	shared = 1;
 }
+
+// Is query added in Favourites?
 function addFavourite()
 {
 	favourite = 1;
 }
+
+// Load the primary keys of the main tables, to use in future.
 function loadPrimaryKeys()
 {
 	var list = document.getElementById("form_metadata_primary_keys_value");
@@ -1876,6 +1907,8 @@ function addRemoveSharedFav(SF, changeid)
 	);
 }
 
+
+// Loading the query when we click on any query in HISTORY or SHARED pane.
 function loadQuery(query)
 {
 	query = query.replace("&gt;", ">");
@@ -1920,6 +1953,8 @@ function loadQuery(query)
 
 	switch_sqlquery();
 }
+
+// Showing and and or when we try to add a new filter.
 function showANDOR()
 {
 	document.getElementById('request_filter_add_new').style.display = 'block';
@@ -1932,6 +1967,8 @@ $('#request_filter_field').on('change', function (e) {
 });
 
 
+
+// This function is used to switch panes in 'About Expora'
 var curr_ABOUT = 0;
 function gotoABOUT(N)
 {

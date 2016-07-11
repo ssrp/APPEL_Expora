@@ -1,5 +1,10 @@
 <?php
 	include 'functions.php';
+
+	/*
+		USED FOR installexpora.php
+		THIS CODE IS USED TO INSERT THE FIELDS IN THE THIRD PANE, FOR PUTTING IN THE DESCRIPTION IN ENGLISH AND FRENCH
+	*/
 	$servername = $_POST['servername'];
 	$username = $_POST['username'];
 	$password = $_POST['password'];

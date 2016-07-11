@@ -1,7 +1,8 @@
-
+// THIS VARIABLE IS USED TO SET THE PANE TO BE USED IN THE INSTALLATION PAGE.
 var currSetup = 0;
 var e = document.getElementsByClassName("setup_options");
 
+// ATTRIBUTES FOR THE CONNECT.PHP FILE
 var servername = "";
 var username = "";
 var password = "";
@@ -9,7 +10,6 @@ var dbname = "";
 var auth = "";
 var system = "";
 var tableOne = "";
-var data = 0;
 var tableTwo = "";
 var tableOne_PK = "";
 var tableTwo_PK = "";
@@ -17,6 +17,11 @@ var foreignK = "";
 var prefix = "";
 var connectCreated = false;
 
+// Number of fields to be loaded in the third pane, to add the description.
+var data = 0;
+
+
+// Start function
 function start()
 {
 	e[1].style.display = "none";
@@ -24,6 +29,7 @@ function start()
 	loadIfPresent();
 }
 
+// Changing the panes.
 function gotoSetup(N)
 {
 	if(N == 1 && connectCreated == false)
@@ -40,6 +46,8 @@ function loadIfPresent()
 {
 
 }
+
+// this function is used to create the connect.php file if everything is right.
 function setupConnect()
 {
 	servername = document.getElementById("servername").value;
@@ -118,6 +126,8 @@ function setupConnect()
 		}
 	);
 }
+
+// This function is used to setup(load) the fields description in the third pane.
 function setupFields()
 {
 	document.getElementById("table_details").innerHTML = "";
@@ -198,6 +208,8 @@ function setupFields()
 		}
 	);
 }
+
+// This function is used after the description is put by the user in the fields, then the values are added using this script.
 function updateFields()
 {
 	for(var i = 1; i < data; i++)

@@ -1,5 +1,6 @@
 <?php
 
+	/*THIS FILE IS USED TO CREATE THE connect.php FILE*/
 	$servername = $_POST['servername'];
 	$username = $_POST['username'];
 	$password = $_POST['password'];
@@ -13,9 +14,9 @@
 	$prefix = $_POST['prefix'];
 	$foreignK = $_POST['foreignK'];
 
-
+		// Trying to create a new empty file with write right.
 		$myfile = fopen('../installation/connect.php', 'w') or die('Unable to create file!');
-		
+		// Putting in the information.
 		fwrite($myfile, "<?php\n");
 		fwrite($myfile, "\t" . '// The Name Of The Connection Server.' . "\n");
 		fwrite($myfile, "\t" . '$servername = \'' . $servername . "';\n");
@@ -79,5 +80,6 @@
 		fwrite($myfile, "\t" . 'include "functions.php";' . "\n");
 		fwrite($myfile, "\t" . 'include "functions2.php";' . "\n");
 		fwrite($myfile, '' . '?>' . "\n");
+		// Closing the file.
 		fclose($myfile);		
 ?>
