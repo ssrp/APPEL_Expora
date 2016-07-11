@@ -11,7 +11,6 @@
 	$tableOne_PK = $_POST['tableOne_PK'];
 	$tableTwo_PK = $_POST['tableTwo_PK'];
 	$prefix = $_POST['prefix'];
-
 	// Create A Connection
 	if($system == "MySQL")
 	{

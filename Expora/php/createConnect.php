@@ -11,6 +11,7 @@
 	$tableOne_PK = $_POST['tableOne_PK'];
 	$tableTwo_PK = $_POST['tableTwo_PK'];
 	$prefix = $_POST['prefix'];
+	$foreignK = $_POST['foreignK'];
 
 
 		$myfile = fopen('../installation/connect.php', 'w') or die('Unable to create file!');
@@ -41,6 +42,9 @@
 		fwrite($myfile, "\t" . '// The primary keys of the tables are stored here.\n');
 		fwrite($myfile, "\t" . '$tableOne_PK = \'' . $tableOne_PK . "';\n");
 		fwrite($myfile, "\t" . '$tableTwo_PK = \'' . $tableTwo_PK . "';\n");
+		fwrite($myfile, "\t" . '' . "\n");
+		fwrite($myfile, "\t" . '// Foreign Key(in table One) to connect to the first table is stored here.\n');
+		fwrite($myfile, "\t" . '$foreignK = \'' . $foreignK . "';\n");
 		fwrite($myfile, "\t" . '' . "\n");
 		fwrite($myfile, "\t" . '// Prefix is stored here.' . "\n");
 		fwrite($myfile, "\t" . '$prefix = \'' . $prefix . '\'; // PUT YOUR PREFIX HERE. BUT IF YOU DO IT, CHANGE THE TABLE NAMES IN THE DATABASE ACCORDINGLY\n');

@@ -88,120 +88,132 @@
 							</ul>
 						</nav>
 						<div class = "about_options">
-							<h3>About Expora</h3>
-							Expora is a web-application/web-interface which helps you extract any database which as maximum two tables, in many export formats(HTML, Lexico, TreeCloud, etc). The supported database management systems are MySQL and PostgreSQL. The application is made as generic as possible and currently, it's in French and English language. The code behind Expora is very easy to understand and can be edited/improved for any specific use.
-							<br>
-							You can connect your database by altering the connect.php file and adding the appropriate tables in the database. Here is the complete app, you may also find a very detailed installation process here:<br>
-							<center><a href = "https://github.com/ssrp/APPEL_Expora" class = "text-center btn btn-success" target = "_blank">Download Expora</a></center>
-							<h3>Database Is Secure!</h3>
-							The database is properly protected from the people who are not authorized to use Expora. They should have an account to access the database. So, there's no loss/leakage of data. When signing up, an <b>Authentication Key</b> is required by the user without which, he/she can not access Expora. If someone tries to use any 'bad' queries which might affect the database, he/she will be caught because every time user runs the query, his username, query, time of execution and IP address is logged.
-							<br>
-							<h3>Using Expora</h3>
-							If you have an experience with SQL, you can use the <b>SQL Query</b> pane to export the data in any format you want. If not, then Expora has a <b>Extract Sub-Corpus</b> pane using which, you can select the data that you want to extract and download the output in varied formats. It also has the options for filters and sorting the data(so, you don't need to have knowledge about SQL, Expora will do the job!). Pretreatments(like replacement of smileys, text etc), XSL Transformations, Visualisations are some of the features of Expora.
-							<br>
-							Whenever a user executes the query, it gets saved in the <b>History</b> pane for the furthur use. Also, if the user wants to share the query, he can choose the share option and it'll be visible to all the users who use Expora(under same database).
-							<br><br>
-						</div>
-						<div class = "about_options">
-								<h3>How to use - EXTRACT SUB-CORPUS</h3>
+							<span class = "interface_about_expora_description">
+								<h3>About Expora</h3>
+								Expora is a web-application/web-interface which helps you extract any database which as maximum two tables, in many export formats(HTML, Lexico, TreeCloud, etc). The supported database management systems are MySQL and PostgreSQL. The application is made as generic as possible and currently, it's in French and English language. The code behind Expora is very easy to understand and can be edited/improved for any specific use.
 								<br>
-								<ol>
-										<li>
-											<b>Select Exporting Text Data</b><br>
-											Just select the text data that you want to extract and click on next
-										</li>
-										<li>
-											<b>Select Exporting Metadata</b><br>
-											Select the metadata that you want to extract and click next.
-										</li>
-										<li>
-												<b>Using Filters</b><br>
-											Filters are used to add some conditions in the query, For example, I want to extract all cars whose name start with S. You can achieve the "whose name start with S" using filters. 
-										
-										</li>
-										<li>
-												<b>Sorting</b><br>
-											You can sort the output using any of the fields in asc or dsc order.
-										</li>
-										<li>
-											<b>Pretreatments</b><br>
-											Choose the pretreatments like all lowercase(output to be lowercase), replacement of smileys(explain), use csv file to find and replace from a file.
-										</li>
-										<li>
-											<b>Output Format</b><br>
-											Choose the output formats that you want to use, if you'd like to use the XSL Transformation, then upload the XSL file and the Expora will transform a simple XML (Example here) file into the output using the XSL File you uploaded.
-											You can also share the generated query with other users working and add the query to your favourites(it won't be shown to all)
-										</li>
-								</ol>
-									Now clicking on '<b>EXPORT!</b>' will create the output for you!
-						</div>
-						<div class = "about_options">
-							<h3>What is 'Your History'?</h3>
-							This is a table which contains all the queries that you executed so far. If you do not have knowledge of SQL, then also you can get to know which query you used, otherwise, <b>you can use the search field to locate the query by the name you gave it</b>.
+								You can connect your database by altering the connect.php file and adding the appropriate tables in the database. Here is the complete app, you may also find a very detailed installation process here:<br>
+								<center><a href = "https://github.com/ssrp/APPEL_Expora" class = "text-center btn btn-success" target = "_blank">Download Expora</a></center>
+								<h3>Database Is Secure!</h3>
+								The database is properly protected from the people who are not authorized to use Expora. They should have an account to access the database. So, there's no loss/leakage of data. When signing up, an <b>Authentication Key</b> is required by the user without which, he/she can not access Expora. If someone tries to use any 'bad' queries which might affect the database, he/she will be caught because every time user runs the query, his username, query, time of execution and IP address is logged.
 								<br>
-							<h3>What are 'Shared Queries'?</h3>
-							You can see all the queries which are made public to all the other users working with Expora under same environment.
+								<h3>Using Expora</h3>
+								If you have an experience with SQL, you can use the <b>SQL Query</b> pane to export the data in any format you want. If not, then Expora has a <b>Extract Sub-Corpus</b> pane using which, you can select the data that you want to extract and download the output in varied formats. It also has the options for filters and sorting the data(so, you don't need to have knowledge about SQL, Expora will do the job!). Pretreatments(like replacement of smileys, text etc), XSL Transformations, Visualisations are some of the features of Expora.
+								<br>
+								Whenever a user executes the query, it gets saved in the <b>History</b> pane for the furthur use. Also, if the user wants to share the query, he can choose the share option and it'll be visible to all the users who use Expora(under same database).
+								<br><br>
+							</span>
 						</div>
 						<div class = "about_options">
-							<h3>How to use 'SQL Query' Pane?</h3>
-							You can enter your SQL Query in the provided fields and choose the pretreatments and file format the same way you choose for Extract Sub Corpus and you are good to go!
+								<span class=  "interface_how_to_use_description">
+									<h3>How to use - EXTRACT SUB-CORPUS</h3>
+
+									<br>
+									<ol>
+											<li>
+												<b>Select Exporting Text Data</b><br>
+												Just select the text data that you want to extract and click on next
+											</li>
+											<li>
+												<b>Select Exporting Metadata</b><br>
+												Select the metadata that you want to extract and click next.
+											</li>
+											<li>
+													<b>Using Filters</b><br>
+												Filters are used to add some conditions in the query, For example, I want to extract all cars whose name start with S. You can achieve the "whose name start with S" using filters. 
+											
+											</li>
+											<li>
+													<b>Sorting</b><br>
+												You can sort the output using any of the fields in asc or dsc order.
+											</li>
+											<li>
+												<b>Pretreatments</b><br>
+												Choose the pretreatments like all lowercase(output to be lowercase), replacement of smileys(explain), use csv file to find and replace from a file.
+											</li>
+											<li>
+												<b>Output Format</b><br>
+												Choose the output formats that you want to use, if you'd like to use the XSL Transformation, then upload the XSL file and the Expora will transform a simple XML (Example here) file into the output using the XSL File you uploaded.
+												You can also share the generated query with other users working and add the query to your favourites(it won't be shown to all)
+											</li>
+									</ol>
+										Now clicking on '<b>EXPORT!</b>' will create the output for you!
+									</span>
 						</div>
 						<div class = "about_options">
-							<h3>How To Add Metadata?</h3>
-							This pane is used to add some new column to the current available tables. There are four things that a new column needs: 
-							<ul>
-								<li>Column name</li>
-								<li>Which table should has it?</li>
-								<li>Its description (to be shown in the extracting fields)</li>
-								<li>The values corresponding to different rows in that table(using primary key)</li>
-							</ul>
-							<b>Note</b>: PRIMARY_KEY is the <u>key of the table in which the new column has to be inserted</u>.
-							<br>For that, we have the following format:
-							<br>
-							<b>
-									<br>"lang-english";"DESCRIPTION IN ENGLISH"
-									<br>"lang-french";"DESCRIPTION IN FRENCH"
-									<br>"PRIMARY_KEY";"NEW_COLUMN_NAME"
-									<br>"KEY_VALUE1";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE1"
-									<br>"KEY_VALUE2";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE2"
-									<br>"KEY_VALUE3";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE3"
-									<br>"KEY_VALUE4";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE4"
-									<br>"KEY_VALUE5";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE5"
-							</b>
-							<br>
-							<br>
-							You can add more columns using semicolons. Also, there's an option for uploading a CSV File if the data is too large to handle!
-							<br>
-							The primary key pane shows the description about the primary keys of the tables used.
+							<span class = "interface_history_shared_queries_description">
+								<h3>What is 'Your History'?</span></h3>
+								This is a table which contains all the queries that you executed so far. If you do not have knowledge of SQL, then also you can get to know which query you used, otherwise, <b>you can use the search field to locate the query by the name you gave it</b>.
+									<br>
+								<h3>What are 'Shared Queries'?</h3>
+								You can see all the queries which are made public to all the other users working with Expora under same environment.
+							</span>
 						</div>
 						<div class = "about_options">
-							<h3>Meet The Developers!</h3>
-							<b>Expora</b> is designed and developed by <b>Mr. Sai Samarth R Phaye</b> under the supervision of <b>Dr. Philippe Gambette</b> and <b>Dr. Jean-Marc Leblanc</b> at Laboratoire d'Informatique Gaspard-Monge, UPEM.
-							
-							<center>
-								<a href = "https://plus.google.com/+SaiSamarthRPhaye/posts" target = "_blank">
-									<div class = "display_pictures">
-										<img class = "display_pictures_img" src = "images/sai.jpg">
-										<hr style = "margin:0.2em; padding:0em">
-										<b>Sai Samarth R Phaye</b>
-									</div>
-								</a>
-								<a href = "http://igm.univ-mlv.fr/~gambette/indexENG.php" target = "_blank">
-									<div class = "display_pictures">
-									<img class = "display_pictures_img" src = "images/philippe.jpg">
-										<hr style = "margin:0.2em; padding:0em">
-										<b>Philippe Gambette</b>
-									</div>
-								</a>
-								<a href = "http://ceditec.u-pec.fr/membres/enseignants-chercheurs/leblanc-jean-marc-341913.kjsp" target = "_blank">
-									<div class = "display_pictures">
-									<img class = "display_pictures_img" src = "images/jeanmarc.jpg">
-										<hr style = "margin:0.2em; padding:0em">
-										<b>Jean-Marc Leblanc</b>
-									</div>
-								</a>
-							</center>
-							
+							<span class = "interface_sql_query_pane_description">
+								<h3>How to use 'SQL Query' Pane?</h3>
+								You can enter your SQL Query in the provided fields and choose the pretreatments and file format the same way you choose for Extract Sub Corpus and you are good to go!
+							</span>
+						</div>
+						<div class = "about_options">
+							<span class = "interface_metadata_description">
+								<h3>How To Add Metadata?</h3>
+								This pane is used to add some new column to the current available tables. There are four things that a new column needs: 
+								<ul>
+									<li>Column name</li>
+									<li>Which table should has it?</li>
+									<li>Its description (to be shown in the extracting fields)</li>
+									<li>The values corresponding to different rows in that table(using primary key)</li>
+								</ul>
+								<b>Note</b>: PRIMARY_KEY is the <u>key of the table in which the new column has to be inserted</u>.
+								<br>For that, we have the following format:
+								<br>
+								<b>
+										<br>"lang-english";"DESCRIPTION IN ENGLISH"
+										<br>"lang-french";"DESCRIPTION IN FRENCH"
+										<br>"PRIMARY_KEY";"NEW_COLUMN_NAME"
+										<br>"KEY_VALUE1";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE1"
+										<br>"KEY_VALUE2";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE2"
+										<br>"KEY_VALUE3";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE3"
+										<br>"KEY_VALUE4";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE4"
+										<br>"KEY_VALUE5";"COLUMN_VALUE CORRESPONDING TO KEY_VALUE5"
+								</b>
+								<br>
+								<br>
+								You can add more columns using semicolons. Also, there's an option for uploading a CSV File if the data is too large to handle!
+								<br>
+								The primary key pane shows the description about the primary keys of the tables used.
+							</span>
+						</div>
+						<div class = "about_options">
+							<span class = "interface_developers_description">
+								<h3>Meet The Developers!</h3>
+								<b>Expora</b> is designed and developed by <b>Mr. Sai Samarth R Phaye</b> under the supervision of <b>Dr. Philippe Gambette</b> and <b>Dr. Jean-Marc Leblanc</b> at Laboratoire d'Informatique Gaspard-Monge, UPEM.
+							</span>
+	
+								<center>
+									<a href = "https://plus.google.com/+SaiSamarthRPhaye/posts" target = "_blank">
+										<div class = "display_pictures">
+											<img class = "display_pictures_img" src = "images/sai.jpg">
+											<hr style = "margin:0.2em; padding:0em">
+											<b>Sai Samarth R Phaye</b>
+										</div>
+									</a>
+									<a href = "http://igm.univ-mlv.fr/~gambette/indexENG.php" target = "_blank">
+										<div class = "display_pictures">
+										<img class = "display_pictures_img" src = "images/philippe.jpg">
+											<hr style = "margin:0.2em; padding:0em">
+											<b>Philippe Gambette</b>
+										</div>
+									</a>
+									<a href = "http://ceditec.u-pec.fr/membres/enseignants-chercheurs/leblanc-jean-marc-341913.kjsp" target = "_blank">
+										<div class = "display_pictures">
+										<img class = "display_pictures_img" src = "images/jeanmarc.jpg">
+											<hr style = "margin:0.2em; padding:0em">
+											<b>Jean-Marc Leblanc</b>
+										</div>
+									</a>
+								</center>
 						</div>
 					</div>
 

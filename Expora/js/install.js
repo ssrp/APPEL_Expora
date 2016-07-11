@@ -13,6 +13,7 @@ var data = 0;
 var tableTwo = "";
 var tableOne_PK = "";
 var tableTwo_PK = "";
+var foreignK = "";
 var prefix = "";
 var connectCreated = false;
 
@@ -51,6 +52,7 @@ function setupConnect()
 	tableTwo = document.getElementById("tableTwo").value;
 	tableOne_PK = document.getElementById("tableOne_PK").value;
 	tableTwo_PK = document.getElementById("tableTwo_PK").value;
+	foreignK = document.getElementById("foreignK").value;
 	prefix = document.getElementById("prefix").value;
 	if(servername == "" || username == "" || dbname == "" || auth == "" || system == "" || tableOne == "" || tableOne_PK == "")
 	{
@@ -74,7 +76,7 @@ function setupConnect()
 		{
 			url:"php/createConnect.php", //the page containing php script
 			type: "POST", //request type
-			data:{servername:servername, username:username, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix}, 
+			data:{servername:servername, username:username, foreignK: foreignK, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix}, 
 			success:function(result)
 			{
 			},
@@ -88,7 +90,7 @@ function setupConnect()
 		{
 			url:"php/createDatabase.php", //the page containing php script
 			type: "POST", //request type
-			data:{servername:servername, username:username, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix}, 
+			data:{servername:servername, username:username, foreignK: foreignK, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix}, 
 			success:function(result)
 			{
 				if(result == "")
@@ -125,7 +127,7 @@ function setupFields()
 		{
 			url:"php/insertFields.php", //the page containing php script
 			type: "POST", //request type
-			data:{servername:servername, username:username, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix}, 
+			data:{servername:servername, username:username, foreignK: foreignK, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix}, 
 			success:function(result)
 			{
 				res = result;
@@ -219,7 +221,7 @@ function updateFields()
 			{
 				url:"php/alterFields.php", //the page containing php script
 				type: "POST", //request type
-				data:{query:query,servername:servername, username:username, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix},
+				data:{query:query,servername:servername, username:username, foreignK: foreignK, password:password, dbname:dbname, auth:auth, system:system, tableOne:tableOne, tableTwo:tableTwo, tableOne_PK:tableOne_PK, tableTwo_PK:tableTwo_PK, prefix:prefix},
 				success:function(result)
 				{
 					if(result == "")

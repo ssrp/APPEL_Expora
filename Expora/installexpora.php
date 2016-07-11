@@ -93,6 +93,12 @@
 				</div>
 			</div>
 			<div class="form-group">
+				<label for = "foreignK" class="col-sm-4 control-label">Foreign Key, To Connect The First Table With The Second</label>
+				<div class="col-sm-6">
+					<input type="text" id = "foreignK" class="form-control" name = "connectphp" placeholder="foreignKey" required>
+				</div>
+			</div>
+			<div class="form-group">
 				<label for = "prefix" class="col-sm-4 control-label">Prefix To Be Used</label>
 				<div class="col-sm-6">
 					<input type="text" id = "prefix" class="form-control" name = "connectphp" placeholder="prefix_ (Optional)" required>
