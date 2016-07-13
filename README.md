@@ -9,7 +9,7 @@ Expora is a web-application/web-interface which helps you extract any database w
 
 
 NOTE:
-If The Website Is Running Slow, Then PLEASE COMMENT THE LINE NUMBER 874 of expora.php (The syntax here tries to connect with internet for generating the Server IP Address). If commented, default value of hostip: "No Internet" will be logged.
+If The Website Is Running Slow, Then PLEASE COMMENT THE LINE NUMBER 909 of expora.php (The syntax here tries to connect with internet for generating the Server IP Address). If commented, default value of hostip: "No Internet" will be logged.
 
 **************************************************************
 
