@@ -89,7 +89,6 @@ function setupConnect()
 			{
 			},
 	  	complete: function(){
-
 			}
 		}
 	);
@@ -118,7 +117,7 @@ function setupConnect()
 					gotoSetup(1);
 				}
 				else
-					alert(result);
+					document.getElementById("connect_output").innerHTML = result;
 			},
 	  	complete: function(){
 
@@ -143,19 +142,7 @@ function setupFields()
 				res = result;
 				if(result == "")
 				{
-					alert("SUCCESSFUL! Please Check Your File In 'Installation' Folder.");
-					connectCreated = true;
-					document.getElementById("database_name").innerHTML = dbname;
-					document.getElementById("system_type").innerHTML = system;
-					if(system == "MySQL")
-					{
-						document.getElementById("system_panel").innerHTML = "phpMyAdmin";
-					}
-					if(system == "PostgreSQL")
-					{
-						document.getElementById("system_panel").innerHTML = "phpPgAdmin";
-					}
-					gotoSetup(1);
+
 				}
 				else
 				{
@@ -228,7 +215,7 @@ function updateFields()
 		var english = document.getElementById("english__" + i.toString()).value;
 		var french = document.getElementById("french__" + i.toString()).value;
 		var query = "UPDATE " + prefix + "fields SET field_type = '" + type + "', english = '" + english + "', french = '" + french + "' WHERE (field_name = '"+ column_name + "' AND field_table = '" + table_name + "')";
-		alert(query);
+		//alert(query);
 		$.ajax(
 			{
 				url:"php/alterFields.php", //the page containing php script

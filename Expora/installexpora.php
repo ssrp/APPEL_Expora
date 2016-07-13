@@ -111,13 +111,17 @@
 			<div>
 				<button type="submit" class="btn btn-default" onclick = "setupConnect()">Create connect.php File</button>
 			</div>
-		</div></center>
+		</div><br><br>
+		<div id = "connect_output">
+		</div>
+		<br><br><br>
+		</center>
 
 	</div>
 	<div class = "setup_options col-md-10 col-md-offset-1">
 		<center>
 			<h2 class = "text-center">-- Inserting The Main Tables --</h2>
-			<h4>The database <b><span id = "database_name"></span></b> is created in <b><span id = "system_type"></span></b> database management system. Please go to your admin panel(<b><span id = "system_panel"></span></b>) and import the two tables in the database. After uploading the tables, please click -</h4>
+			<h4>Your connect file is created in the <b>installation</b> folder in Expora. Please put this file in the <b>php</b> folder(replace old one if it exists). <br><br>The database <b><span id = "database_name"></span></b> is created in <b><span id = "system_type"></span></b> database management system. Please go to your admin panel(<b><span id = "system_panel"></span></b>) and import the two tables in the database. After uploading the tables, please click -</h4>
 			<br>
 			<button class="btn btn-default" onclick = "gotoSetup(2);setupFields()">Tables Uploaded Successfully</button>
 		</center>

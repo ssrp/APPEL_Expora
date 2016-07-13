@@ -40,7 +40,7 @@
 	}
 
 
-	$query = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='" . $dbname ."' AND TABLE_NAME='" . $tableOne . "'";
+	$query = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='" . $tableOne . "'";
 	$query_run = runQuery($conn, $query);
 	if(!$query_run)
 	{
@@ -73,7 +73,7 @@
 	}
 	if($tableTwo != "")
 	{
-		$query = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA='" . $dbname ."' AND TABLE_NAME='" . $tableTwo . "'";
+		$query = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE  TABLE_NAME='" . $tableTwo . "'";
 		$query_run = runQuery($conn, $query);
 		if(!$query_run)
 		{
