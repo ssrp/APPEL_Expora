@@ -25,6 +25,9 @@
 	// The primary keys of the tables are stored here.
 	$tableOne_PK = "id_pets";
 	$tableTwo_PK = "id_signs";
+	
+	// Foreign Key(present in table TWO) to connect to the first table is stored here.
+	$foreignK = 'id_pets';
 
 	// Prefix is stored here.
 	$prefix = "petitions_"; // PUT YOUR PREFIX HERE. BUT IF YOU DO IT, CHANGE THE TABLE NAMES IN THE DATABASE ACCORDINGLY

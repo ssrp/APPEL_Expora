@@ -44,7 +44,7 @@
 		fwrite($myfile, "\t" . '$tableOne_PK = \'' . $tableOne_PK . "';\n");
 		fwrite($myfile, "\t" . '$tableTwo_PK = \'' . $tableTwo_PK . "';\n");
 		fwrite($myfile, "\t" . '' . "\n");
-		fwrite($myfile, "\t" . '// Foreign Key(in table One) to connect to the first table is stored here.' . "\n");
+		fwrite($myfile, "\t" . '// Foreign Key(in table TWO) to connect to the first table is stored here.' . "\n");
 		fwrite($myfile, "\t" . '$foreignK = \'' . $foreignK . "';\n");
 		fwrite($myfile, "\t" . '' . "\n");
 		fwrite($myfile, "\t" . '// Prefix is stored here.' . "\n");

@@ -848,22 +848,40 @@
 				-->
 			<nav class = "text-center" style = "margin-bottom:0em; margin-top:0em">
 				<ul class="pagination">
-					<li><a href="#" onclick = "alert('Under Construction!')"><span class = "">Output</span></a></li>
-					<li><a href="#" onclick = "alert('Under Construction!')"><span class = "">Text Visualizations</span></a></li>
-					<li><a href="#" onclick = "alert('Under Construction!')"><span class = "">Other Visualizations</span></a></li>
+					<li><a href="#" onclick = "gotoQueryOutput(0)"><span class = "">Output</span></a></li>
+					<li><a href="#" onclick = "gotoQueryOutput(1)"><span class = "">Text Visualizations</span></a></li>
+					<li><a href="#" onclick = "gotoQueryOutput(3)"><span class = "">Other Visualizations</span></a></li>
 				</ul>
 			</nav>
 			<br><br>
 
-		<div id = "query_result_downloads" style = "font-size: 2em; margin-left:0em">
+		<div class = "query_result_options" id = "query_result_downloads" style = "font-size: 2em; margin-left:0em">
 			<ul id = "query_result_downloads_ul"  style = "margin-left:0em">
 			</ul>
+
+			<div id = "output_container" style = "overflow:auto">
+
+
+
+
+			</div>
 		</div>
-		<div id = "output_container" style = "overflow:auto">
 
+		<div class = "query_result_options">
+					
+			<center>
+			<h1 style = "top-margin:0em">Extract Words</h1>
+			<div id = "chart_div">
+			</div>
+			<h3>
+			<div id = "output">
+			</div>
+			</h3>
+			</center>
+		</div>
 
-
-
+		<div class = "query_result_options">
+			
 		</div>
 	</div>
 
@@ -890,6 +908,7 @@
 	<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
 <!--	<script type="text/javascript" src="http://l2.io/ip.js?var=hostip"></script>-->
 	<script src="js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
 </body>
