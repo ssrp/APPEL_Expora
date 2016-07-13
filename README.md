@@ -1,5 +1,13 @@
 # EXPORA
 
+Expora is a web-application/web-interface which helps you extract any database which as maximum two tables, in many export formats(HTML, Lexico, TreeCloud, etc). The supported database management systems are MySQL and PostgreSQL. The application is made as generic as possible and currently, it's in French and English language. The code behind Expora is very easy to understand and can be edited/improved for any specific use. 
+
+    Expora Copyright (C) 2016  Sai Samarth R Phaye
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+
 NOTE:
 If The Website Is Running Slow, Then PLEASE COMMENT THE LINE NUMBER 874 of expora.php (The syntax here tries to connect with internet for generating the Server IP Address). If commented, default value of hostip: "No Internet" will be logged.
 
