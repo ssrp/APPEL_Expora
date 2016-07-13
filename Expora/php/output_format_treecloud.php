@@ -79,7 +79,7 @@
 			  				$field = str_replace("<"," ",$field);
 				  			$field = str_replace(">"," ",$field);
 				  			$field = str_replace("&"," ",$field);
-				  			$field = iconv(mb_detect_encoding($field, mb_detect_order(), false), "ISO-8859-1//TRANSLIT//IGNORE" , $field);
+				  			$field = mb_convert_encoding($field, 'ISO-8859-1', mb_detect_encoding($field, mb_detect_order(), false));
 					        fwrite($myfile, $field . " ");
 				    	}
 				    	// Otherwise --

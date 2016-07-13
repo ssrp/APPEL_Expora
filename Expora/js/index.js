@@ -332,7 +332,7 @@ function buildQuery()
 							}
 							else
 							{
-								var output = "<li>TreeClouD file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
+								var output = "<li>TreeCloud file created: <a href=\"downloads/".concat(result).concat('" download><b>Download File</b></a></li>');
 		   			    	}$(output).appendTo("#query_result_downloads_ul");
 						},
 	  	complete: function(){
