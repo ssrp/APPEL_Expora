@@ -181,7 +181,7 @@ function setupFields()
 
    			    	var type = document.getElementById(("type_").concat(i.toString()));
 
-					$("<div class='checkbox' style = 'margin:0em; padding:0.1em'><label><input type = 'radio' id = 'type_text__" + i.toString() + "'> Text Data <br></label></div><div class='checkbox' style = 'margin:0em; padding:0.1em'><label><input type = 'radio' name = 'type_meta__"+ i.toString() + "'> Metadata</label></div>" ).appendTo("#type_" + i.toString());
+					$("<div class='checkbox' style = 'margin:0em; padding:0.1em'><label><input type = 'radio' name = 'type__" + i.toString() + "'> Text Data <br></label></div><div class='checkbox' style = 'margin:0em; padding:0.1em'><label><input type = 'radio' name = 'type__"+ i.toString() + "'> Metadata</label></div>" ).appendTo("#type_" + i.toString());
 
 
    			    	var english = document.getElementById(("english_").concat(i.toString()));
@@ -216,7 +216,7 @@ function updateFields()
 	{
 		var column_name = document.getElementById("field__" + i.toString()).innerHTML;
 		var type = "";
-		if(document.getElementById("type_text__" + i.toString()).checked == true)
+		if(document.getElementsByName("type__" + i.toString())[0].checked == true)
 		{
 			type = "text";
 		}

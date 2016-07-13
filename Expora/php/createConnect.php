@@ -40,15 +40,15 @@
 		fwrite($myfile, "\t" . '$tableOne = \'' . $tableOne . "';\n");
 		fwrite($myfile, "\t" . '$tableTwo = \'' . $tableTwo . "';\n");
 		fwrite($myfile, "\t" . '' . "\n");
-		fwrite($myfile, "\t" . '// The primary keys of the tables are stored here.\n');
+		fwrite($myfile, "\t" . '// The primary keys of the tables are stored here.' . "\n");
 		fwrite($myfile, "\t" . '$tableOne_PK = \'' . $tableOne_PK . "';\n");
 		fwrite($myfile, "\t" . '$tableTwo_PK = \'' . $tableTwo_PK . "';\n");
 		fwrite($myfile, "\t" . '' . "\n");
-		fwrite($myfile, "\t" . '// Foreign Key(in table One) to connect to the first table is stored here.\n');
+		fwrite($myfile, "\t" . '// Foreign Key(in table One) to connect to the first table is stored here.' . "\n");
 		fwrite($myfile, "\t" . '$foreignK = \'' . $foreignK . "';\n");
 		fwrite($myfile, "\t" . '' . "\n");
 		fwrite($myfile, "\t" . '// Prefix is stored here.' . "\n");
-		fwrite($myfile, "\t" . '$prefix = \'' . $prefix . '\'; // PUT YOUR PREFIX HERE. BUT IF YOU DO IT, CHANGE THE TABLE NAMES IN THE DATABASE ACCORDINGLY\n');
+		fwrite($myfile, "\t" . '$prefix = \'' . $prefix . '\'; // PUT YOUR PREFIX HERE. BUT IF YOU DO IT, CHANGE THE TABLE NAMES IN THE DATABASE ACCORDINGLY');
 		fwrite($myfile, "\t" . '' . "\n");
 		fwrite($myfile, "\t" . '' . "\n");
 		fwrite($myfile, "\t" . '// Create A Connection' . "\n");
