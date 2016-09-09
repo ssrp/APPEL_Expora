@@ -1,0 +1,20 @@
+@font-face {
+	font-family:"Sans Serif";
+	src: url("../fonts/Code.ttf");
+    src: url("../fonts/Code.woff");
+    src: url("../fonts/Code.eot");
+}
+@font-face {
+    font-family: "code";
+    src: url('../fonts/Code.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'code';
+  src: url('../fonts/Code.eot?#iefix') format('embedded-opentype'),  url('../fonts/Code.woff') format('woff'), url('../fonts/Code.ttf')  format('truetype'), url('../fonts/Code.svg#../fonts/Code') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
