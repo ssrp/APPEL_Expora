@@ -14,9 +14,9 @@ If The Website Is Running Slow, Then PLEASE COMMENT THE LINE NUMBER 909 of expor
 **************************************************************
 
 TO CONNECT TO A NEW DATABASE:
-1. Import The File: "For_New_DB/mydb.sql" in the database. (Current Prefix Used Is "", That Is, There Is No Prefix)
-2. Edit The File: "For_New_DB/connect.php" accordingly and place(replace it with the old one) it in "php" folder of the expora.
-3. Complete The Tables(fields, table_links) In The DBMS.
+1. Import The File: "For_New_DB/mydb.sql" in the database (current prefix is "", that is, there is no prefix)
+2. Edit The File: "For_New_DB/connect.php" accordingly and place (replace it with the old one) it in "php" folder of the expora.
+3. Complete The Tables (fields, table_links) In The DBMS.
 
 NOTE: In the table 'fields', the field_type column can have two values: 'text' or 'metadata' (CASE-SENSITIVE)
 
